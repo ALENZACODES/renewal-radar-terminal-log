@@ -1,0 +1,80 @@
+$ git config user.name "John Khan"
+
+$ git config user.email 309250657+ALENZACODES@users.noreply.github.com
+
+$ git pull
+Already up to date.
+
+$ git status --short
+ M app/page.tsx
+ M components/site-header.tsx
+?? AGENTS.md
+
+$ git diff
+diff --git a/app/page.tsx b/app/page.tsx
+index 8dd549e..c4310df 100644
+--- a/app/page.tsx
++++ b/app/page.tsx
+@@ -10,8 +10,14 @@ import { SiteFooter } from '@/components/site-footer'
+ export default function Page() {
+   return (
+     <>
++      <a
++        href="#main"
++        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:shadow"
++      >
++        Skip to main content
++      </a>
+       <SiteHeader />
+-      <main>
++      <main id="main" tabIndex={-1}>
+         <Hero />
+         <DemoVideo />
+         <Audience />
+diff --git a/components/site-header.tsx b/components/site-header.tsx
+index e4cb82d..57fa24a 100644
+--- a/components/site-header.tsx
++++ b/components/site-header.tsx
+@@ -15,6 +15,9 @@ export function SiteHeader() {
+           <a href="#features" className="hidden text-muted-foreground hover:text-foreground sm:inline">
+             Features
+           </a>
++          <a href="#how-it-works" className="hidden text-muted-foreground hover:text-foreground sm:inline">
++            How it works
++          </a>
+           <a href="#why" className="hidden text-muted-foreground hover:text-foreground sm:inline">
+             Why now
+           </a>
+
+$ pnpm build 2>&1 | tail -15
+✓ Compiled successfully in 3.8s
+  Skipping validation of types
+  Finished TypeScript config validation in 4ms ...
+  Collecting page data using 4 workers ...
+  Generating static pages using 4 workers (0/3) ...
+✓ Generating static pages using 4 workers (3/3) in 438ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+
+$ git add app/page.tsx components/site-header.tsx
+
+$ git commit -m "Add skip to content link and How it works nav link"
+[main 71bed1b] Add skip to content link and How it works nav link
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+$ git push origin main
+To https://github.com/ALENZACODES/renewal-radar-site.git
+   b935e8c..71bed1b  main -> main
+
+$ git log -3 --format='%h %an %s'
+71bed1b John Khan Add skip to content link and How it works nav link
+b935e8c John Khan Add clone and pull steps to README
+0c25088 John Khan Update stress test wording and add social preview metadata
+

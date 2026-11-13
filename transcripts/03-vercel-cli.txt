@@ -1,0 +1,8 @@
+$ vercel --version
+Vercel CLI 65.15.0 (native)
+65.15.0
+$ vercel whoami
+Vercel CLI 65.15.0
+> Logged out.
+> Run `vercel deploy --temporary` to create a temporary deployment you can claim later, or `vercel login` to log in.
+(exit 1)
