@@ -1,5 +1,7 @@
 # Renewal Radar, Shipped from the Terminal
 
+![Cover](cover.png)
+
 A log of taking my Renewal Radar site from GitHub to my own machine and back, using only typed commands.
 
 Live site: https://renewal-radar-site.vercel.app
