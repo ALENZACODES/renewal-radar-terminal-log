@@ -20,12 +20,20 @@ The commit I pushed: https://github.com/ALENZACODES/renewal-radar-site/commit/71
 
 ![The site running locally with the skip link showing](images/local-site-skip-link.png)
 
-## Files
-| File | What it is |
-| --- | --- |
-| COMMANDS.md | Every command, in order, with what it does |
-| transcripts/01-clone-install-run.txt | Raw output: tools, clone, install, local run |
-| transcripts/02-change-build-commit-push.txt | Raw output: diff, build, commit, push |
-| transcripts/03-vercel-cli.txt | Raw output: Vercel CLI install and login check |
+## Project structure
+
+```text
+renewal-radar-terminal-log/
+├── images/                              # Screenshots
+│   ├── commit-71bed1b.png
+│   └── local-site-skip-link.png
+├── transcripts/                         # Raw terminal output
+│   ├── 01-clone-install-run.txt         # Tools, clone, install, local run
+│   ├── 02-change-build-commit-push.txt  # Diff, build, commit, push
+│   └── 03-vercel-cli.txt                # Vercel CLI install and login check
+├── COMMANDS.md                          # Every command, in order, with what it does
+├── cover.png                            # Cover image
+└── README.md                            # This file
+```
 
 Built by John Khan, ALENZA CODES, Toronto, Ontario.
